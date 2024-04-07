@@ -1,21 +1,24 @@
 #include "case.h"
 
-Case::Case(int num, std::string t, std::string col, int loyer, int prix,
-                 std::string name)
-    : numero(num), type(t), couleur(col), coutLocation(loyer), coutAchat(prix),
-      nom(name) {}
+Case::Case(int num, string t, string col, int loyer, int prix, string name,
+           string nomduprop)
+    : numero(num), type(t), couleur(col), coutlocationinit(loyer),
+      coutAchat(prix), nom(name), nomduproprietaire(nomduprop) {
+  nbdemaison = 0;
+  coutLocation = coutlocationinit;
+}
 
 int Case::getNumero() const { return numero; }
 
 void Case::setNumero(int num) { numero = num; }
 
-std::string Case::getType() const { return type; }
+string Case::getType() const { return type; }
 
-void Case::setType(std::string t) { type = t; }
+void Case::setType(string t) { type = t; }
 
-std::string Case::getCouleur() const { return couleur; }
+string Case::getCouleur() const { return couleur; }
 
-void Case::setCouleur(std::string col) { couleur = col; }
+void Case::setCouleur(string col) { couleur = col; }
 
 int Case::getCoutLocation() const { return coutLocation; }
 
@@ -25,6 +28,17 @@ int Case::getCoutAchat() const { return coutAchat; }
 
 void Case::setCoutAchat(int prix) { coutAchat = prix; }
 
-std::string Case::getNom() const { return nom; }
+string Case::getNom() const { return nom; }
 
-void Case::setNom(std::string name) { nom = name; }
+void Case::setNom(string name) { nom = name; }
+
+string Case::getNomduProprio() const { return nomduproprietaire; }
+void Case::setNomduProprio(string nomduproprio) {
+  nomduproprietaire = nomduproprio;
+}
+
+int Case::getNbdeMaison() const { return nbdemaison; }
+void Case::setNbdeMaison() {
+  nbdemaison += 1;
+  coutLocation = coutlocationinit + 100 * nbdemaison;
+}

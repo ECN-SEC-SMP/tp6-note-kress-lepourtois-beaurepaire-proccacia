@@ -1,31 +1,34 @@
-#ifndef CASE_H
-#define CASE_H
+#pragma once
 
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class Case {
 private:
   int numero;
-  std::string type;
-  std::string couleur;
-  std::vector<int> listeMaison;
+  string type;
+  string couleur;
+  int nbdemaison;
   int coutLocation;
+int coutlocationinit;
   int coutAchat;
-  std::string nom;
+  string nom;
+  string nomduproprietaire;
 
 public:
-  Case(int num, std::string t, std::string col, int loyer, int prix,
-       std::string name);
+  Case(int num, string t, string col, int loyer, int prix, string name,
+       string nomduproprio);
 
   int getNumero() const;
   void setNumero(int num);
 
-  std::string getType() const;
-  void setType(std::string t);
+  string getType() const;
+  void setType(string t);
 
-  std::string getCouleur() const;
-  void setCouleur(std::string col);
+  string getCouleur() const;
+  void setCouleur(string col);
 
   int getCoutLocation() const;
   void setCoutLocation(int loyer);
@@ -33,8 +36,12 @@ public:
   int getCoutAchat() const;
   void setCoutAchat(int prix);
 
-  std::string getNom() const;
-  void setNom(std::string name);
-};
+  string getNom() const;
+  void setNom(string name);
 
-#endif // CASE_H
+  string getNomduProprio() const;
+  void setNomduProprio(string nomduproprio);
+
+  int getNbdeMaison() const;
+  void setNbdeMaison();
+};

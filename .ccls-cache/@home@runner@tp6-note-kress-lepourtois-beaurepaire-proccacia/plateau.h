@@ -1,5 +1,4 @@
-#ifndef PLATEAU_H
-#define PLATEAU_H
+#pragma once
 
 #include "carte.h"
 #include "case.h"
@@ -7,17 +6,17 @@
 
 class Plateau {
 private:
-  std::vector<Case> cases;
-  std::vector<Carte> cartes;
+  vector<Case> cases;
+  vector<Carte> cartes;
   int argentCentre;
-  std::vector<int> maisonsEtHotels;
+  vector<int> maisonsEtHotels;
 
 public:
   Plateau();
   int getArgentCentre() const;
   void setArgentCentre(int argent);
-
-  // Ajouter des getters et setters si nécessaire
+  Case getCase(int index) const;
+  void setProprioOnCase(int index, string nom);
+  void achatmaison(int index);
+  Carte getcarte();
 };
-
-#endif // PLATEAU_H

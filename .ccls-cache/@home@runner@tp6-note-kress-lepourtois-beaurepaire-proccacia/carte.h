@@ -1,17 +1,33 @@
-#ifndef CARTE_H
-#define CARTE_H
+#pragma once
 
 #include <string>
 
+using namespace std;
+
 class Carte {
 private:
-  std::string instruction;
+  string type;
+  bool payer;
+  int coutAPayerOuRecevoir;
+  bool deplacer;
+  int positionOuAller;
 
 public:
-  Carte(std::string instr);
+  // Constructeur
+  Carte(string type, bool payer, int coutAPayerOuRecevoir, bool deplacer,
+        int positionOuAller);
 
-  std::string getInstruction() const;
-  void setInstruction(std::string instr);
+  // Getters
+  string getType() const;
+  bool getPayer() const;
+  int getCoutAPayerOuRecevoir() const;
+  bool getDeplacer() const;
+  int getPositionOuAller() const;
+
+  // Setters
+  void setType(const string type);
+  void setPayer(bool payer);
+  void setCoutAPayerOuRecevoir(int coutAPayerOuRecevoir);
+  void setDeplacer(bool deplacer);
+  void setPositionOuAller(int positionOuAller);
 };
-
-#endif // CARTE_H

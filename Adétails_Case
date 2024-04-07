@@ -1,0 +1,32 @@
+Case :
+
+Attibuts :
+    -Numéro
+    -Type de Case : Terrain, Gare, Prison, Aller en Prison, Simple Visite, Parc gratuit, Tirer une carte Chance, Tirer une carte caisse de communauté, Départ, Impôt sur le revenu)
+
+Détail du type de case (du plus simple au plus compliqué) :
+    Aller en Prison : 
+      Attribut : 
+  
+
+
+
+
+    Terrain :
+    Attribut
+      - Rue : 
+        Attributs :
+          -Couleur
+          -Liste de Maison
+          -les différents loyers
+      - Gare
+        nombre de gare possédés du joueur
+
+      -Loyer
+      -Coût d'Achat
+      -Nom
+
+    Méthode : Loyer(numéro case)
+    
+    
+      
